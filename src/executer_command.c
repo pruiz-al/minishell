@@ -1,4 +1,4 @@
-#include "../minishell.h"
+#include "../inc/minishell.h"
 
 void	free_paths(char **paths, int i)
 {

@@ -16,6 +16,7 @@
 # include "libft/inc/libft.h"
 # include <readline/readline.h>
 # include <readline/history.h>
+# include <sys/wait.h>
 # include <unistd.h>
 # include <stdio.h>
 # include <stdbool.h>
@@ -146,7 +147,7 @@ void	ft_update_join(t_token **lst);
 
 // MAIN.C
 
-void	ft_minishell(t_shell *shell);
+void	ft_minishell(t_shell *shell, char **env);
 
 // PROCESS_REDIRECTION.C //
 

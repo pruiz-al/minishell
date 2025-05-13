@@ -35,7 +35,7 @@ int	ft_read_input(t_shell *shell)
 	return (1);
 }
 
-void	ft_minishell(t_shell *shell)
+void	ft_minishell(t_shell *shell, char **env)
 {
 	while (1)
 	{
@@ -48,7 +48,10 @@ void	ft_minishell(t_shell *shell)
 		ft_dequotize(shell);
 		ft_print_tokens(shell->token);
 		if (shell->token && ft_get_commands(shell))
+		{
 			ft_print_cmdlst(shell->cmd_lst);
+			ft_exec_commands(shell, &env);
+		}
 		ft_cleanup_shell(shell);
 	}
 	ft_cleanup_shell(shell);
@@ -63,7 +66,7 @@ int	main(int argc, char **argv, char **env)
 	if (!*env)
 		return (ft_putendl_fd("minishell: enviroment must not be empty", 2), 1);
 	shell = ft_init_shell(ft_copy_env(env));
-	ft_minishell(shell);
+	ft_minishell(shell, env);
 	ft_clean(shell->env, NULL, shell);
 	return (0);
 }

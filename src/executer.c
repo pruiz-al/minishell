@@ -1,4 +1,4 @@
-#include "../minishell.h"
+#include "../inc/minishell.h"
 
 void    ft_check_exitstat(int status, t_cmd *cmd)
 {

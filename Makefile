@@ -7,6 +7,10 @@ CFILES =	src/check_syntax.c \
 			src/clean2.c \
 			src/commands_utils.c \
 			src/dequotize.c \
+			src/exec_exit.c \
+			src/exec_pwd.c \
+			src/executer_command.c \
+			src/executer.c \
 			src/expand_exitstatus.c \
 			src/expand_utils.c \
 			src/expand_var.c \
@@ -15,6 +19,7 @@ CFILES =	src/check_syntax.c \
 			src/list_utils.c \
 			src/main.c \
 			src/process_redirection.c \
+			src/redirections.c \
 			src/signals.c \
 			src/tknize_quotes.c \
 			src/tokenize.c \

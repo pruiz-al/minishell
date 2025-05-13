@@ -1,4 +1,4 @@
-#include "../minishell.h"
+#include "../inc/minishell.h"
 
 int	ft_isnum(char *str)
 {
@@ -18,8 +18,8 @@ int	ft_isnum(char *str)
 
 void	free_exit(t_shell *ms)
 {
-	ft_free_shell(ms);
-	free(ms);
+	ft_cleanup_shell(ms);
+	ft_clean(ms->env, NULL, ms);
 }
 
 void	exec_exit(t_shell *ms, t_cmd *cmd)
